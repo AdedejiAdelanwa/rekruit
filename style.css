@@ -9,6 +9,8 @@ body {
     flex-direction: column;
     align-items: center;
     background: #f8f7f7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 
 
 }
@@ -16,15 +18,13 @@ body {
 .navbar {
     position: absolute;
     top: 0px;
-    width: 95%;
-    /* padding-left: 200px; */
+    width: 100%;
     display: flex;
     height: 10%;
     align-items: center;
     justify-content: space-around;
     display: flex;
-    z-index: 2;
-    border: 1px solid #1781d8;
+    box-shadow: 0px 3px #e2e1e1;
 }
 
 .navbar  a {
@@ -39,7 +39,6 @@ body {
     width: 16.5%;
     justify-content: flex-end;
     align-items: center;
-    border: 1px solid red;
     display: flex;
     
 }
@@ -50,26 +49,50 @@ body {
     width: 40%;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
+    text-align:
 }
 
-.navbar > input {
+.navbar  form {
+    display: flex;
     width: 30%;
     background-color: #1781d8;
     padding: 5px;
-    color: #fff;
     border-radius: 5px;
+    border: 0px;
+    color: #fff;
 }
 
+.navbar  form > div {
+    width: 100%;
+}
 
+.navbar > form i {
+    color: white;
+    margin-left: auto;
+}
 
+.navbar input {
+    width: 90%;
+    background-color: #1781d8;
+    border: 0px;
+    padding-left: 10px;
+}
+
+.navbar input:focus {
+    outline: none
+}
+
+.navbar ::placeholder {
+    color: white;
+    opacity: 1;
+}
 
 
 
 
 .main-grid {
     position: absolute;
-    top: 73px;
+    top: 100px;
     z-index: 1;
     height: 90%;
     width: 75%;
@@ -126,7 +149,7 @@ body {
     top: 290px;
     text-align: center;
 }
-.user-profile > .edit-profile {
+.user-profile  .edit-profile {
     color: #c0c0c0;
     font-size: 16px;
     position: absolute;
@@ -347,8 +370,24 @@ hr {
     flex-direction: column;
 }
 
+.post-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 30px;
+}
+
+.post-container i {
+    color: grey;
+}
+
+.post-container input:focus {
+    outline: none;
+}
+
 .posts input {
-    width: 99.5%;
+    width: 90%;
+    border: 0px;
 }
 
 .create-post > .create-icons {
@@ -363,6 +402,10 @@ hr {
 
 .create-icons > div {
     border-right: 1.5px solid #ffffff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
 }
 
 .popular-post {
@@ -387,6 +430,7 @@ hr {
 .popular-post span {
     font-size: 10px;
     color: #000;
+    border-right: 1.5px solid #ffffff;
 }
 
 .posts  div > .example-post {
@@ -423,6 +467,8 @@ hr {
 .posts .reaction-icons {
     display: flex;
     font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .posts > .likes {
@@ -439,6 +485,11 @@ hr {
     
 }
 
+.reaction {
+    width: 30%;
+    height: 25px;
+}
+
 .reaction-bar > .comments {
     width: 30%;
     display: flex;
@@ -452,9 +503,11 @@ hr {
 
 /* For Discussions and top-jobs */
 .text-props {
+
     padding: 5px 10px 0px 15px;
     font-size: 10px;
     font-weight: 600;
+    line-height: normal;
 
 }
 
@@ -463,6 +516,7 @@ hr {
 .discussions {
     position: relative;
     grid-area: d;
+    height: 200px;
 }
 
 .discussions hr {
@@ -480,7 +534,9 @@ hr {
 
 .top-jobs {
     position: relative;
+    top: 120px;
     grid-area: t;
+    height: 200px;
 }
 
 .top-jobs hr {
